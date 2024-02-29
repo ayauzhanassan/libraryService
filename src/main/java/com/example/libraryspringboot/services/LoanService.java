@@ -43,10 +43,10 @@ public class LoanService {
 
 
     public void createLoan(Book book, Long userId) {
-        int numBooksBorrowed = countBooksBorrowedByUser(userId);
-        if (numBooksBorrowed >= 5) {
-            throw new RuntimeException("Maximum number of books borrowed reached for the user.");
-        }
+//        int numBooksBorrowed = countBooksBorrowedByUser(userId);
+//        if (numBooksBorrowed >= 5) {
+//            throw new RuntimeException("Maximum number of books borrowed reached for the user.");
+//        }
 
         Loan loan = new Loan();
         loan.setBook(book);
@@ -59,9 +59,9 @@ public class LoanService {
         bookRepository.save(book);
     }
 
-    public int countBooksBorrowedByUser(Long userId) {
-        return loanRepository.countBooksBorrowedByUser(userId);
-    }
+//    public int countBooksBorrowedByUser(Long userId) {
+//        return loanRepository.countBooksBorrowedByUser(userId);
+//    }
 
     public void completeLoan(Long bookId) {
         List<Loan> loans = loanRepository.findAll();
