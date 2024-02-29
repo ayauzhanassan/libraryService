@@ -1,4 +1,4 @@
-package Controllers;
+package com.example.libraryspringboot.services;
 
 import com.example.libraryspringboot.entities.Author;
 import com.example.libraryspringboot.repositories.AuthorRepository;
